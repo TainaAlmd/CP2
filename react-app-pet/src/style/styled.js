@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 export const DivInput = styled.div`
     margin-left: 1rem;
+    margin-bottom: 1rem;
+
+    div{
+        margin-bottom: 0.5rem;
+    }
 
     .painel{
         width: 90%; display: flex; margin: auto; flex-wrap: wrap;
