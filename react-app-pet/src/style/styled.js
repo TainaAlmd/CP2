@@ -21,3 +21,7 @@ export const DivTarefa = styled.div`
     margin: 10px;
     h2,p{ padding-bottom: 10px; }
 `
+
+export const DivInput = styled.div`
+    margin-left: 1rem;
+`

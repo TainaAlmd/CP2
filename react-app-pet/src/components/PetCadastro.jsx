@@ -1,46 +1,58 @@
 import React from 'react'
+import { DivInput } from '../style/styled'
 
-export default function PetCadastro(props) {
+export default function PetCadastro() {
+
+    const [pet, setPet] = useState({'nome':'', 'idade':'', 'raca':'', 'tamanho':'', 'nomeDoDono':'', 'telefoneDoDono':'', 'imagem':'', 'observacao':''})
+
     return(
-        <div>
-            <form method="post" onSubmit={props.funcaoAddTarefa}>
+        <DivInput>
+            <form method="post" >
             <div>
-                <label>Nome</label>
-                <input type="text" name="nome" placeholder="Nome" value={props.captura.titulo} onChange={props.oQueFoiDigitado}/>
+                <label><b>Nome</b></label>
+                <br />
+                <input type="text" name='nome' placeholder="Nome" onChange={} value={pet.nome}/>
             </div>
             <div>
-                <label>Idade</label>
-                <input type="number" name="idade" placeholder="Idade" value={props.novaTarefa.setor} onChange={props.oQueFoiDigitado}/>
+                <label><b>Idade</b></label>
+                <br />
+                <input type="number" name='idade' placeholder="Idade" onChange={} value={pet.idade}/>
             </div>
             <div>
-                <label>Raça</label>
-                <input type="text" name="raca" placeholder="Raça" value={props.novaTarefa.titulo} onChange={props.oQueFoiDigitado}/>
+                <label><b>Raça</b></label>
+                <br />
+                <input type="text" name='raca' placeholder="Raça" onChange={} value={pet.raca}/>
             </div>
             <div>
-                <label>Tamanho em cm</label>
-                <input type="number" name="tamanho" placeholder="Tamanho" value={props.novaTarefa.setor} onChange={props.oQueFoiDigitado}/>
+                <label><b>Tamanho em cm</b></label>
+                <br />
+                <input type="number" name='tamanho' placeholder="Tamanho" onChange={} value={pet.tamanho}/>
             </div>
             <div>
-                <label>Nome do dono</label>
-                <input type="text" name="nomeDoDono" placeholder="NomeDoDono" value={props.novaTarefa.titulo} onChange={props.oQueFoiDigitado}/>
+                <label><b>Nome do dono</b></label>
+                <br />
+                <input type="text" name='nomeDoDono' placeholder="Nome Do Dono" onChange={} value={pet.nomeDoDono}/>
             </div>
             <div>
-                <label>Telefone do dono</label>
-                <input type="number" name="telefoneDoDono" placeholder="TelefoneDoDono" value={props.novaTarefa.setor} onChange={props.oQueFoiDigitado}/>
+                <label><b>Telefone do dono</b></label>
+                <br />
+                <input type="text" name='telefoneDoDono' placeholder="Telefone Do Dono" onChange={} value={pet.telefoneDoDono}/>
             </div>
             <div>
-                <label>Imagem do pet</label>
-                <input type="file" accept="image/*" name="imagem" placeholder="Imagem" value={props.novaTarefa.setor} onChange={props.oQueFoiDigitado}/>
+                <label><b>Imagem do pet</b></label>
+                <br />
+                <input type="file" accept="image/*" name='imagem' placeholder="Imagem" onChange={} value={pet.imagem}/>
             </div>
             <div>
-                <label>Observações</label>
-                <textarea cols="30" rows="10" name="observacao" placeholder="Observação" value={props.novaTarefa.descricao} onChange={props.oQueFoiDigitado}></textarea>
+                <label><b>Observações</b></label>
+                <br />
+                <textarea cols="30" rows="10" name='observacao' placeholder="Observação" onChange={} value={pet.observacao}></textarea>
             </div>
             <div>
                 <button type="submit">Adicionar</button>
             </div>
             </form>
-        </div>
+        </DivInput>
     )
 }
 
