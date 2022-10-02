@@ -64,7 +64,7 @@ export default function PetCadastro() {
                 <button type="submit">Adicionar</button>
             </div>
             </form>
-            <div>
+            <div className='painel'>
                 {listaPet.map((pt, i)=>
                 <div className='etiqueta' key={i}>
                     <p>Nome: {pt.nome}</p>
@@ -82,5 +82,3 @@ export default function PetCadastro() {
     )
 }
 
-
-//Ajustar onSubmit, value e onChange
